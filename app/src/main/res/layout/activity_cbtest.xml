@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CBTestActivity" android:id="@+id/coordinatorLayout">
+
+    <android.support.design.widget.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:id="@+id/appBarLayout" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+        />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <Button
+            android:text="Next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/CBBtn" app:layout_anchorGravity="bottom|center"
+            app:layout_anchor="@+id/include"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/CBTxt"
+            android:layout_marginStart="32dp" android:layout_marginEnd="32dp" android:onClick="CBBtnClick"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/plate1"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/CBImageView" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/CBTxt" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/CBImageView" android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp" android:hint="Enter number"/>
+
+</android.support.constraint.ConstraintLayout>
